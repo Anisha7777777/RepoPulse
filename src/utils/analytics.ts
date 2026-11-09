@@ -1,0 +1,2 @@
+import type {Commit} from '../types/github';
+export function groupCommits(commits:Commit[],days:number,now=new Date()){const end=new Date(now);end.setUTCHours(0,0,0,0);const buckets=Array.from({length:days},(_,i)=>{const date=new Date(end);date.setUTCDate(date.getUTCDate()-(days-1-i));return {date:date.toISOString().slice(0,10),commits:0};});const map=new Map(buckets.map(b=>[b.date,b]));for(const c of commits){const d=c.commit?.committer?.date||c.commit?.author?.date;if(typeof d==='string'){const bucket=map.get(d.slice(0,10));if(bucket)bucket.commits++;}}return buckets;}

@@ -1,0 +1,3 @@
+export interface Repository {id:number;name:string;full_name:string;description:string|null;html_url:string;owner:{login:string;avatar_url:string};stargazers_count:number;forks_count:number;open_issues_count:number;subscribers_count:number;language:string|null;license:{spdx_id:string}|null;created_at:string;pushed_at:string|null;size:number;default_branch:string;archived:boolean;visibility:string;topics:string[]}
+export interface Commit {sha:string;html_url:string;commit:{message:string;author:{name:string;date:string}|null;committer:{date:string}|null}}
+export interface AttentionItem {id:number;number:number;title:string;html_url:string;user:{login:string}|null;created_at:string;updated_at:string;pull_request?:{url:string}}
