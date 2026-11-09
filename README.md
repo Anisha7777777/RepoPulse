@@ -2,6 +2,10 @@
 
 RepoPulse is a single-page dashboard for exploring public GitHub repositories. It uses React, TypeScript, Vite, and Recharts. The interface is designed around one repository at a time.
 
+## Live demo
+
+[Open RepoPulse](https://repopulse-hdjm.onrender.com/)
+
 ## Run locally
 
 Use PowerShell from the project folder:
